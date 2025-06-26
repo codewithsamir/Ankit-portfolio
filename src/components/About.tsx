@@ -68,7 +68,8 @@ const About: React.FC = () => {
               <div className="relative">
                 <div className="w-80 h-80 mx-auto bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full overflow-hidden shadow-2xl">
                   <img
-                    src="/ankit.jpg"
+                    // src="/ankit.jpg"
+                    src="https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/480260986_3536418889994179_7004838434107165283_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGKMhi4vH9_8dReb9yUF7xv4ewxlfK47_Th7DGV8rjv9FBl44RuYVBfOg2kzQrw50sByDZk2WZlz7rBqGo6d-C8&_nc_ohc=8007urUfseAQ7kNvwFgnesF&_nc_oc=AdkfaQ5mNmxTO1chTVVCPS0F55RP2nkgIaBMV-yakqaHcajoCGENGKGI0by7jycbQuH3oVTcLem5xOt78V_68jvk&_nc_zt=23&_nc_ht=scontent.fktm7-1.fna&_nc_gid=QcpYmCIpbUofHskNsfLI0g&oh=00_AfOXjt4-gQdk17vJIk_xTcjfDZGuA9PM97yO6ArLJOUnbA&oe=68633D92"
                     alt="Ankit Swarnkar"
                     className="transition-transform duration-300 ease-in-out scale-125 hover:scale-150 w-full h-full object-cover rounded-full shadow-lg object-top"
 
