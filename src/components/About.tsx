@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, GraduationCap, Users, Globe, Heart, MapPin } from 'lucide-react';
+import { GraduationCap, Users, Globe, Heart, MapPin, Gem } from 'lucide-react';
 
 const About: React.FC = () => {
   const [ref, inView] = useInView({
@@ -11,29 +11,29 @@ const About: React.FC = () => {
 
   const highlights = [
     {
-      icon: Code,
-      title: 'Full Stack Developer',
-      description: 'MERN Stack specialist with passion for clean code'
+      icon: GraduationCap,
+      title: 'Teacher at Saan Coaching Center',
+      description: 'Teaching and mentoring students in a supportive environment'
     },
     {
-      icon: GraduationCap,
-      title: 'Educator at Saan Academy',
-      description: 'Teaching and mentoring future developers'
+      icon: Gem,
+      title: 'Entrepreneur',
+      description: 'Managing our family jewelry shop and business'
     },
     {
       icon: Globe,
-      title: 'IELTS 7.5 Band',
-      description: 'Fluent English communication skills'
+      title: 'English Skills',
+      description: 'Fluent English communication, IELTS 7.5 Band'
     },
     {
       icon: Users,
       title: 'Team Leader',
-      description: 'Leading projects and organizing tech events'
+      description: 'Leading and organizing educational activities'
     },
     {
       icon: Heart,
       title: 'Family Business',
-      description: 'Helping manage our gold shop legacy'
+      description: 'Supporting our gold shop legacy with modern ideas'
     },
     {
       icon: MapPin,
@@ -66,17 +66,15 @@ const About: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="relative">
-                <div className="w-80 h-80 mx-auto bg-gradient-to-br from-indigo-500 to-purple-600 rounded-full overflow-hidden shadow-2xl">
+                <div className="w-80 h-80 mx-auto  rounded-full overflow-hidden shadow-2xl">
                   <img
-                    // src="/ankit.jpg"
-                    src="https://scontent.fktm7-1.fna.fbcdn.net/v/t39.30808-6/480260986_3536418889994179_7004838434107165283_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGKMhi4vH9_8dReb9yUF7xv4ewxlfK47_Th7DGV8rjv9FBl44RuYVBfOg2kzQrw50sByDZk2WZlz7rBqGo6d-C8&_nc_ohc=8007urUfseAQ7kNvwFgnesF&_nc_oc=AdkfaQ5mNmxTO1chTVVCPS0F55RP2nkgIaBMV-yakqaHcajoCGENGKGI0by7jycbQuH3oVTcLem5xOt78V_68jvk&_nc_zt=23&_nc_ht=scontent.fktm7-1.fna&_nc_gid=QcpYmCIpbUofHskNsfLI0g&oh=00_AfOXjt4-gQdk17vJIk_xTcjfDZGuA9PM97yO6ArLJOUnbA&oe=68633D92"
+                    src="ankit.jpg"
                     alt="Ankit Swarnkar"
                     className="transition-transform duration-300 ease-in-out scale-125 hover:scale-150 w-full h-full object-cover rounded-full shadow-lg object-top"
-
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 bg-yellow-400 rounded-full p-4 shadow-lg">
-                  <Code className="text-black" size={24} />
+                  <GraduationCap className="text-black" size={24} />
                 </div>
               </div>
             </motion.div>
@@ -88,22 +86,15 @@ const About: React.FC = () => {
               className="space-y-6"
             >
               <p className="text-lg text-gray-700 leading-relaxed">
-                I'm a passionate Full Stack Developer currently pursuing my Bachelor's degree at 
-                <span className="font-semibold text-indigo-600"> Rajershi University</span> in 
-                Janakpur-14, Nepal. My journey in tech is driven by curiosity and a desire to 
-                create meaningful digital experiences.
+                I'm a dedicated teacher at <span className="font-semibold text-indigo-600">Saan Coaching Center</span> in Janakpur-14, Nepal. I enjoy helping students grow and succeed in their studies.
               </p>
               
               <p className="text-lg text-gray-700 leading-relaxed">
-                As an educator at <span className="font-semibold text-indigo-600">Saan Academy</span>, 
-                I've had the privilege of mentoring over 100 students in web development. With my 
-                IELTS 7.5 band score, I bridge language barriers to make technology accessible to everyone.
+                As an entrepreneur, I manage our family's jewelry shop, combining tradition with new ideas to serve our community.
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed">
-                Beyond coding, I'm actively involved in our family's gold shop business, where I 
-                apply my organizational and leadership skills. I believe in balancing tradition 
-                with innovation, bringing modern solutions to established practices.
+                My strong English skills (IELTS 7.5 Band) help me communicate and teach effectively, making learning accessible for everyone.
               </p>
 
               <div className="flex flex-wrap gap-3 pt-4">

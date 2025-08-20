@@ -1,116 +1,77 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronDown, Download, Github, Linkedin, Mail } from 'lucide-react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Download, Linkedin, Mail } from "lucide-react";
 
 const Hero: React.FC = () => {
-  const [displayedText, setDisplayedText] = useState('');
-  const fullText = 'Full Stack Developer & Educator';
-  
-  useEffect(() => {
-    let index = 0;
-    const timer = setInterval(() => {
-      if (index < fullText.length) {
-        setDisplayedText(fullText.slice(0, index + 1));
-        index++;
-      } else {
-        clearInterval(timer);
-      }
-    }, 100);
-    
-    return () => clearInterval(timer);
-  }, []);
-
-  const scrollToNext = () => {
-    const aboutSection = document.getElementById('about');
-    aboutSection?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
-    <section className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-indigo-800 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-yellow-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white">
+      <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
+        {/* Profile Image */}
+        <motion.img
+          src="ankit.jpg"
+          alt="Ankit Swarnkar"
+          className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-indigo-200 shadow-xl object-cover object-top"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
 
-      <div className="relative z-10 container mx-auto px-6 h-screen flex items-center">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Hey, I'm{' '}
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
-                Ankit Swarnkar
-              </span>
-            </h1>
-          </motion.div>
+        {/* Name */}
+        <motion.h1
+          className="mt-6 text-4xl md:text-6xl font-bold tracking-tight"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          Hi, I’m{" "}
+          <span className="text-indigo-600 dark:text-indigo-400">
+            Ankit Swarnkar
+          </span>
+        </motion.h1>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-8"
-          >
-            <h2 className="text-2xl md:text-4xl text-gray-300 font-light mb-4">
-              {displayedText}
-              <span className="animate-pulse">|</span>
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Building scalable web apps, mentoring future developers, and managing legacy.
-            </p>
-          </motion.div>
+        {/* Intro */}
+        <motion.p
+          className="mt-4 max-w-2xl text-gray-600 dark:text-gray-300 text-lg leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          Teacher at <span className="font-semibold">Saan Coaching Center</span>{" "}
+          | Expert in{" "}
+          <span className="font-semibold">
+            English Speaking, Writing, Listening & Reading
+          </span>{" "}
+          | Helping students improve communication skills with confidence.
+        </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+        {/* Buttons */}
+        <motion.div
+          className="mt-8 flex flex-wrap gap-4 justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <a
+            href="#contact"
+            className="px-6 py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-full shadow-md flex items-center gap-2 transition"
           >
-            <button className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-              <Download size={20} />
-              Download Resume
-            </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
-              <Mail size={20} />
-              Get In Touch
-            </button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex justify-center gap-6 mb-16"
+            <Mail size={18} /> Contact Me
+          </a>
+          <a
+            href="/cv.pdf"
+            className="px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold rounded-full shadow-md flex items-center gap-2 transition"
           >
-            <a href="https://github.com/ankitswarnkar" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
-              <Github size={24} />
-            </a>
-            <a href="https://linkedin.com/in/ankitswarnkar" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
-              <Linkedin size={24} />
-            </a>
-            <a href="mailto:ankit@example.com" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 transform hover:scale-110">
-              <Mail size={24} />
-            </a>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            <Download size={18} /> Download CV
+          </a>
+          <a
+            href="https://linkedin.com/"
+            target="_blank"
+            className="px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold rounded-full shadow-md flex items-center gap-2 transition"
           >
-            <button
-              onClick={scrollToNext}
-              className="text-white hover:text-yellow-400 transition-colors duration-300 animate-bounce"
-            >
-              <ChevronDown size={32} />
-            </button>
-          </motion.div>
-        </div>
+            <Linkedin size={18} /> LinkedIn
+          </a>
+        </motion.div>
       </div>
     </section>
   );
