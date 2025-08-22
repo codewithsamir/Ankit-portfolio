@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Download, Linkedin, Mail } from "lucide-react";
+import { Download, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
       <div className="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
         {/* Profile Image */}
         <motion.img
-          src="ankit.jpg"
+          src="profile.jpg"
           alt="Ankit Swarnkar"
           className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-indigo-200 shadow-xl object-cover object-top"
           initial={{ scale: 0.8, opacity: 0 }}
@@ -70,6 +70,13 @@ const Hero: React.FC = () => {
             className="px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold rounded-full shadow-md flex items-center gap-2 transition"
           >
             <Linkedin size={18} /> LinkedIn
+          </a>
+          <a
+            href="https://github.com/AnkitSwarnkar1122"
+            target="_blank"
+            className="px-6 py-3 bg-gray-200 hover:bg-gray-300 dark:bg-white/10 dark:hover:bg-white/20 text-gray-900 dark:text-white font-semibold rounded-full shadow-md flex items-center gap-2 transition"
+          >
+            <Github size={18} />Github
           </a>
         </motion.div>
       </div>

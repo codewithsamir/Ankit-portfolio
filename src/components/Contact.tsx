@@ -33,8 +33,8 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'ankit@example.com',
-      href: 'mailto:ankit@example.com'
+      value: 'ankit5454q@gmail.com',
+      href: 'mailto:ankit5454q@gmail.com'
     },
     {
       icon: Phone,
@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/ankitswarnkar',
+      href: 'https://github.com/AnkitSwarnkar1122',
       color: 'hover:text-gray-900'
     },
     {

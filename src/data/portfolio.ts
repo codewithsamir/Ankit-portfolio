@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: 'E-Commerce Platform',
     description: 'Full-stack MERN application with payment integration, user authentication, and admin dashboard. Features include shopping cart, order tracking, and inventory management.',
     techStack: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    githubUrl: 'https://github.com/ankitswarnkar',
+    githubUrl: 'https://github.com/AnkitSwarnkar1122',
     image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
     tags: ['#MERN', '#FullStack', '#Responsive', '#Payment']
   },
